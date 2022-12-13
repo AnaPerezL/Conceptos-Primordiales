@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<h1>Programa para iniciar sesión</h1>
+<script>
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    var intentosMax = 3;
+    var contador = 1;
+
+
+while (contador <= intentosMax) {
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        break;
+    } 
+
+    else {
+
+        if(contador == 3) {
+
+        alert("¡Agotaste el número permitido de intentos!");
+        }
+
+        else {    
+        alert("Inicio de sesión inválido. Favor intente de nuevo");
+        }
+
+    }
+
+    contador++;
+
+}
+
+</script>
